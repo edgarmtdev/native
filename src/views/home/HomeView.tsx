@@ -1,35 +1,36 @@
 import React from "react";
-import { View, Text, Button, StyleSheet, Alert } from "react-native";
+import { View, Text, Button, StyleSheet, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
+import { routes } from "../../config";
 
 export const HomeView = () => {
   const navigation: { navigate: (str: string) => void } = useNavigation();
   return (
     <View style={styles.container}>
-      <Text>Este es el home 1</Text>
-      <Button
-        title="Go to units"
-        onPress={() => navigation.navigate('Units')}
-      />
+      <Text style={styles.title}>Métodos de desarrollo para web</Text>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate(routes.viewContent)}
+      >
+        <Text style={{ color: "#fff" }}>Go to units</Text>
+      </TouchableOpacity>
     </View>
   );
 };
 
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "flex-start",
+    justifyContent: "center",
     alignItems: "center",
-    gap: 10,
-    paddingTop: 50
+    gap: 30,
   },
-  title: { color: "#fff", fontSize: 32 },
-  image: { width: 200, height: 200 },
+  title: { fontSize: 32, textAlign: "center" },
   button: {
     margin: 10,
-    padding: 6,
-    backgroundColor: "white",
+    paddingVertical: 15,
+    paddingHorizontal: 30,
+    backgroundColor: "#000",
     borderRadius: 4,
   },
 });

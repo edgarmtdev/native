@@ -4,9 +4,15 @@ import { Tabs } from "../components/tabs";
 
 export const Stack = () => {
   const Stack = createStackNavigator();
-  
-  return <Stack.Navigator>
-    <Stack.Screen name="Home" component={HomeView}/>
-    <Stack.Screen name="Units" component={Tabs}/>
-  </Stack.Navigator>
+
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Home" component={HomeView} />
+      <Stack.Screen
+        name="Subject"
+        component={Tabs}
+        options={{ title: "Metodos de desarrollo para web" }}
+      />
+    </Stack.Navigator>
+  );
 };
