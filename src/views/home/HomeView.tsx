@@ -12,7 +12,7 @@ export const HomeView = () => {
         style={styles.button}
         onPress={() => navigation.navigate(routes.viewContent)}
       >
-        <Text style={{ color: "#fff" }}>Go to units</Text>
+        <Text style={{ color: "#fff" }}>Ir a la Materia</Text>
       </TouchableOpacity>
     </View>
   );

@@ -6,7 +6,9 @@ export const Stack = () => {
   const Stack = createStackNavigator();
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator
+      screenOptions={{ headerStyle: { backgroundColor: "#a7e06d" } }}
+    >
       <Stack.Screen name="Home" component={HomeView} />
       <Stack.Screen
         name="Subject"

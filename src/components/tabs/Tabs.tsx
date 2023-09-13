@@ -22,7 +22,7 @@ export const Tabs = () => {
         name="Units"
         component={UnitsView}
         options={{
-          tabBarLabel: "Units",
+          tabBarLabel: "Unidades",
           tabBarIcon: ({ color, size }) => (
             <AntDesign name="filetext1" color={color} size={size} />
           ),
