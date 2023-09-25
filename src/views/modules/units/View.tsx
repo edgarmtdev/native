@@ -1,7 +1,6 @@
 import { Text, View } from "react-native";
 import { UNITS } from "./model";
 import { styles } from "./styles";
-import { useId } from "react";
 
 export const UnitsView = () => {
   return (

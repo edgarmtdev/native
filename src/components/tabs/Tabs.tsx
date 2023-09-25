@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { UnitsView } from "../../views";
 import AntDesign from "react-native-vector-icons/AntDesign";
+import { UnitsView } from "../../views";
 import { WelcomeView } from "../../views/modules/welcome";
 
 export const Tabs = () => {
@@ -9,7 +9,7 @@ export const Tabs = () => {
   return (
     <Tab.Navigator>
       <Tab.Screen
-        name="Welcome"
+        name="Bienvenidos"
         component={WelcomeView}
         options={{
           tabBarLabel: "Introduction",
@@ -19,7 +19,7 @@ export const Tabs = () => {
         }}
       />
       <Tab.Screen
-        name="Units"
+        name="Unidades"
         component={UnitsView}
         options={{
           tabBarLabel: "Unidades",
