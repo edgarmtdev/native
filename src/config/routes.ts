@@ -1,3 +1,4 @@
 export const routes = {
-    viewContent: 'Subject'
+    viewContent: 'Subject',
+    units: 'Unidades'
 }

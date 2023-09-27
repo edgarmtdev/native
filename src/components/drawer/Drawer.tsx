@@ -2,7 +2,6 @@ import {
   createDrawerNavigator,
   DrawerContentScrollView,
   DrawerItemList,
-  DrawerItem,
   DrawerContentComponentProps,
 } from "@react-navigation/drawer";
 import { WelcomeView } from "../../views/modules/welcome";
@@ -14,8 +13,20 @@ export const Drawer = () => {
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
     >
-      <Drawer.Screen name="Bienvenidos" component={WelcomeView} />
-      <Drawer.Screen name="Unidades" component={UnitsView} />
+      <Drawer.Screen
+        name="Bienvenidos"
+        component={WelcomeView}
+        options={{
+          drawerActiveTintColor: "#85c345",
+        }}
+      />
+      <Drawer.Screen
+        name="Unidades"
+        component={UnitsView}
+        options={{
+          drawerActiveTintColor: "#85c345",
+        }}
+      />
     </Drawer.Navigator>
   );
 };
@@ -24,14 +35,6 @@ const CustomDrawerContent = (props: DrawerContentComponentProps) => {
   return (
     <DrawerContentScrollView {...props}>
       <DrawerItemList {...props} />
-      {/* <DrawerItem
-        label="Close drawer"
-        onPress={() => props.navigation.closeDrawer()}
-      />
-      <DrawerItem
-        label="Toggle drawer"
-        onPress={() => props.navigation.toggleDrawer()}
-      /> */}
     </DrawerContentScrollView>
   );
 };

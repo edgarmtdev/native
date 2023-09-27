@@ -1,6 +1,5 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import { HomeView } from "../views";
-import { Tabs } from "../components/tabs";
 import { Drawer } from "../components/drawer";
 
 export const Stack = () => {
@@ -8,9 +7,11 @@ export const Stack = () => {
 
   return (
     <Stack.Navigator
-      screenOptions={{ headerStyle: { backgroundColor: "#a7e06d" } }}
+      screenOptions={{ headerStyle: { backgroundColor: "#85c345" } }}
     >
-      <Stack.Screen name="Home" component={HomeView} />
+      <Stack.Screen name="Home" component={HomeView} options={{
+        title: 'Inicio'
+      }} />
       <Stack.Screen
         name="Subject"
         component={Drawer}
