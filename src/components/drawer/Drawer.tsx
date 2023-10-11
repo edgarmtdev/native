@@ -4,11 +4,12 @@ import {
   DrawerItemList,
   DrawerContentComponentProps,
 } from "@react-navigation/drawer";
-import { WelcomeView } from "../../views/modules/welcome";
-import { UnitsView } from "../../views";
+import { WelcomeView, RequestsView, UnitsView } from "../../views";
+
 
 export const Drawer = () => {
   const Drawer = createDrawerNavigator();
+
   return (
     <Drawer.Navigator
       drawerContent={(props) => <CustomDrawerContent {...props} />}
@@ -23,6 +24,13 @@ export const Drawer = () => {
       <Drawer.Screen
         name="Unidades"
         component={UnitsView}
+        options={{
+          drawerActiveTintColor: "#85c345",
+        }}
+      />
+      <Drawer.Screen
+        name="Peticiones asincronas"
+        component={RequestsView}
         options={{
           drawerActiveTintColor: "#85c345",
         }}
